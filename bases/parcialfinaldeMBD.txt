@@ -1,0 +1,77 @@
+---PUNTO 1
+--punto 1a
+SELECT nombre,apellido 
+FROM estudiante
+ORDER BY nombre,apellido ASC;
+
+
+--punto 1b
+SELECT profesor.nombre, profesor.apellido, grupo.nombre
+FROM grupo JOIN profesor ON grupo.id_profesor=profesor.id_profesor;
+
+
+--punto 1c
+CREATE VIEW consulta AS
+SELECT 
+	profesor.nombre,
+	profesor.apellido,
+	curso.nombre
+FROM profesor
+	JOIN departamento ON profesor.id_departamento=departamento.id_departamento
+	JOIN curso ON departamento.id_departamento=curso.id_departamento
+ORDER BY profesor.apellido ASC;
+
+SELECT *
+FROM consulta;
+
+
+--punto 1d
+SELECT cur.nombre, dept.nombre
+FROM departamento AS dept JOIN curso AS cur ON dept.id_departamento=cur.id_departamento
+GROUP BY  dept.nombre,cur.nombre
+ORDER BY  cur.nombre ASC;
+
+---punto 1e
+CREATE VIEW total_horas AS
+SELECT salon.nombre,grupo.nombre, hora_fin-hora_inicio AS horas_clase
+FROM grupo JOIN horario ON grupo.id_grupo=horario.id_grupo
+	JOIN salon ON horiario.id_salon=salon.id_salon
+GROUP BY horas_clase,grupo.nombre,salon.nombre;
+
+SELECT *
+FROM total_horas;
+
+
+--punto 1f
+CREATE VIEW numero_grupos_salon AS
+SELECT COUNT(grupo.nombre) AS cantidad_grupos,grupo.nombre,salon.nombre 
+FROM grupo JOIN horario ON grupo.id_grupo=horario.id_grupo
+	JOIN salon ON salon.id_salon=horario.id_salon
+GROUP BY cantidad_grupos,grupo.nombre,salon.nombre ;
+
+SELECT * 
+FROM numero_grupos_salon;
+
+
+
+---PUNTO 2
+>Se garantiza la persistencia de las transacciones escritas ante cualquier fallo->DURABILIDAD
+
+>Cuando la base de datos se encuentra en un estado inconsistente, se actualizan las restricciones 
+de integridad hasta quedar nuevamente en un estado consistente-> CONSISTENCIA
+
+>Las transacciones son completas. Si una transaccion tiene varios pasos, se ejecutan todos
+o ninguno-> ATOMICIDAD
+
+>Cada transaccion debe unicamente tener una operacion, para operar de forma concurrente
+sin problemas->AISLAMIENTO
+
+
+---PUNTO3
+< script type =" text / javascript ">
+
+ function writeData ( titulo , autores , abstract ,
+palabras_clave , url_descarga ) {
+ 
+ }
+</ script >

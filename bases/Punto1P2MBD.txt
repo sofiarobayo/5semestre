@@ -1,0 +1,10 @@
+--PUNTO 1 A
+SELECT ship_country,ship_via,company_name,SUM(freight) AS valor_total
+FROM orders,shippers
+GROUP BY CUBE(ship_country,ship_via,company_name);
+
+
+--PUNTO 1 B
+SELECT ship_country,ship_city,count(order_id) as Numero_pedidos
+FROM orders
+GROUP BY ROLLUP( ship_country,ship_city);

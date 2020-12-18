@@ -1,0 +1,104 @@
+CREATE VIEW test AS
+SELECT 1 AS v;
+
+
+--ACTIVIDAD
+CREATE VIEW listado AS
+SELECT 
+	customer_id,
+	first_name,
+	last_name,
+	address,
+	postal_code,
+	phone,
+	city,
+	country
+
+FROM customer JOIN address ON customer.address_id=address.address_id
+JOIN city ON city.city_id=address.city_id
+JOIN country ON country.country_id=city.country_id;
+
+SELECT * FROM listado;
+DROP VIEW listado;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM test;
+
+CREATE VIEW test2 AS
+SELECT V FROM test;
+
+SELECT * FROM test2;
+
+CREATE OR REPLACE VIEW test AS
+SELECT 2 FROM val;
+
+
+
+CREATE MATERIALIZED VIEW test_mat AS
+select 1 AS v WITH NO DATA;
+
+SELECT * FROM test_mat;
+
+REFRESH MATERIALIZED VIEW test_mat;
+
+SELECT * FROM test_mat;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM film ORDER BY replacement_cost DESC;
+--DESC decendente 
+--ASC asendente
+
+
+SELECT COUNT(replacement_cost) FROM film;
+
+
+SELECT COUNT(DISTINCT replacement_cost) FROM film;
+
+
+
+SELECT rating,
+	   COUNT (replacement_cost) AS n,
+	   SUM (replacement_cost) AS suma,
+	   SUM (replacement_cost)/COUNT(replacement_cost) AS prom,
+	   AVG (replacement_cost) AS prom2,
+	   MIN (replacement_cost) AS mini,
+	   MAX (replacement_cost) AS maxi,
+	   MAX (replacement_cost) - MIN (replacement_cost) AS rango
+FROM film
+GROUP BY rating;
+
+
+
+--ACTIVIDAD
+SELECT MAX (length) AS durmaxi,
+	   MIN (length) AS durmini,
+	   AVG (length) AS durprom
+FROM film
+GROUP BY rating;

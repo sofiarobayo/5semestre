@@ -1,0 +1,41 @@
+respuesta punto A:
+
+CREATE TABLE Categoria
+(
+	id_categoria smallserial PRIMARY KEY,
+	nombre VARCHAR(45) NOT NULL
+	
+);
+
+CREATE TABLE Producto
+(
+	id_producto smallserial PRIMARY KEY,
+	id_categoria smallint NOT NULL,
+	FOREIGN KEY(id_categoria) REFERENCES Categoria(id_categoria),
+	nombre VARCHAR(45) NOT NULL,
+	precio smallint NOT NULL
+	
+);
+
+CREATE TABLE categoria_has_many_producto
+(
+	catego smallint NOT NULL,
+	produ smallint NOT NULL,
+	FOREIGN KEY(catego) REFERENCES Categoria(id_categoria),
+	FOREIGN KEY(produ) REFERENCES Producto(id_producto)
+	
+);
+
+respuesta punto B:
+
+SELECT 
+	id_tienda, 
+	nombre, 
+	unidades
+FROM tienda_producto JOIN tienda ON tienda_producto.id_tienda = tienda.id_tienda;
+
+
+
+respuesta punto C;
+
+

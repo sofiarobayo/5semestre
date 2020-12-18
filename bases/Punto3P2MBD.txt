@@ -1,0 +1,10 @@
+PUNTO 3 PARCIAL
+
+
+
+
+num_producto--> (nombre_producto,precio_unitario,cantidad_vendida)
+num_recibo --> (fecha)
+cod_fabricante --> (nombre_fabricante)
+num_producto --> nombre_producto --> precio_unitario
+num_producto --> nombre_producto --> cantidad_vendida

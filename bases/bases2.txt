@@ -1,0 +1,17 @@
+CREATE VIEW listado AS
+SELECT 
+	customer_id,
+	first_name,
+	last_name,
+	address,
+	postal_code,
+	phone,
+	city,
+	country
+
+FROM customer JOIN address ON customer.address_id=address.address_id
+JOIN city ON city.city_id=address.city_id
+JOIN country ON country.country_id=city.country_id;
+
+SELECT * FROM listado;
+DROP VIEW listado;

@@ -1,0 +1,31 @@
+1.
+item_factura(num_factura, num_item,  id_cliente,  nom_cliente, num_producto, nom_producto, unidades_vendidas,  valor_producto, valor_total_factura, fecha_factura)
+
+Dependencias funcionales parciales:
+-num_factura --> (num_item,unidades_vendidas,valor_total_factura,fecha_factura)
+-id_cliente --> (nom_cliente)
+-num_producto --> ( nom_producto,  valor_producto)
+
+Dependencias funcionales transitivas:
+- num_producto --> nom_producto --> valor_producto
+
+
+2.
+estudiante(cod_estudiante, nombre, fechaNacimiento, semestre, prom_por_semestre)
+
+Dependencias funcionales parciales:
+-cod_estudiante --> (nombre, fechaNacimiento)
+-semestre --> (prom_por_semestre)
+
+Dependencias funcionales transitivas:
+-cod_estudiante --> nombre --> fechaNacimiento AQUI SE ACLARA QUE UNA PERSONA NO TIENE EL MISMO NOMBRE Y FECHA DE NACIMIENTO
+
+
+3.
+carrito_mercado(id_carrito,  id_cliente,  id_producto,cantidad, fecha_vigencia_carrito)
+
+Dependencias funcionales parciales:
+-id_carrito --> ( id_cliente, id_producto, cantidad, fecha_vigencia_carrito)
+
+Dependencias funcionales transitivas:
+-NO TIENE DEPENDENCIAS FUNCIONALES TRANSITIVAS DADO QUE DE LAS DEPENDENCIAS FUNCIONALES PARCIALES NO HAY ALGO MAS ALLA QUE ME IMPLIQUE DE ELLO.

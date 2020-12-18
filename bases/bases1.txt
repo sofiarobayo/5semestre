@@ -1,0 +1,131 @@
+SELECT *
+FROM city;
+
+SELECT *
+FROM country;
+
+SELECT *
+FROM customer AS cust, address AS addr,city AS city, country AS coun
+WHERE 
+	cust.address_id= addr.address_id AND
+	addr.city_id=city.city_id AND
+	city.country_id=coun.country_id;
+	
+	
+SELECT cust.email,addr.district,addr.postal_code,city.city,coun.country
+FROM customer AS cust, address AS addr,city AS city, country AS coun
+WHERE 
+	cust.address_id= addr.address_id AND
+	addr.city_id=city.city_id AND
+	city.country_id=coun.country_id;
+	
+	
+SELECT COUNT (*)
+FROM customer AS cust, address AS addr,city AS city, country AS coun
+WHERE 
+	cust.address_id= addr.address_id AND
+	addr.city_id=city.city_id AND
+	city.country_id=coun.country_id;
+
+
+SELECT *
+FROM city AS city, country AS coun
+WHERE 
+	city.country_id=coun.country_id;
+	
+	
+SELECT city,country
+FROM city JOIN country ON city.country_id=country.country_id;
+
+SELECT *
+FROM 
+	customer JOIN address ON customer.address_id=address.address_id
+	JOIN city ON address.city_id=city.city_id;
+	
+	
+SELECT COUNT(*)
+FROM 
+	customer JOIN rental ON customer.customer_id=rental.customer_id;
+	
+
+
+
+
+
+CREATE TABLE table1(
+	id serial PRIMARY KEY,
+	valor VARCHAR
+);
+
+CREATE TABLE table2(
+	id serial PRIMARY KEY,
+	valor VARCHAR
+);
+
+SELECT * FROM table1;
+SELECT * FROM table2;
+
+INSERT INTO table1 (id, valor) VALUES (1,'x1');
+INSERT INTO table1 (id,valor) VALUES (2,'x2');
+INSERT INTO table1 (id,valor) VALUES (3,'x3');
+SELECT * FROM table1;
+
+INSERT INTO table2 (valor) VALUES ('y1'), ('y2'); 
+INSERT INTO table2 (id, valor) VALUES (4, 'y3'); 
+SELECT * FROM table2;
+
+SELECT * 
+FROM table1 JOIN table2 ON table1.id=table2.id;
+
+SELECT * 
+FROM table1 FULL OUTER JOIN table2 ON table1.id=table2.id;
+
+SELECT * 
+FROM table1 LEFT OUTER JOIN table2 ON table1.id=table2.id;
+
+SELECT * 
+FROM table1 RIGHT OUTER JOIN table2 ON table1.id=table2.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT *
+FROM actor
+WHERE first_name LIKE  'Mi%' OR first_name LIKE '%an';
+
+
+SELECT DISTINCT first_name
+FROM actor
+WHERE first_name LIKE  'Mi%' OR first_name LIKE '%an';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM table1
+UNION
+SELECT * FROM table2;

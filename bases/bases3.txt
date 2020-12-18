@@ -1,0 +1,5 @@
+SELECT MAX (length) AS durmaxi,
+	   MIN (length) AS durmini,
+	   AVG (length) AS durprom
+FROM film
+GROUP BY rating;
