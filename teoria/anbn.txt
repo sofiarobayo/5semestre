@@ -1,0 +1,44 @@
+//LOAD AN EXAMPLE TO TRY
+//then load an input and click play
+
+//Syntax:
+
+//-------CONFIGURATION
+name: a'nb'n
+init: q0
+accept:qaccept
+
+//-------DELTA FUNCTION:
+q0,a,_
+q0,a,_,>,-
+
+q0,b,_
+q0,b,_,>,-
+
+q0,_,_
+q1,_,_,<,-
+
+q1,b,_
+q1,_,b,<,<
+
+q1,a,_
+q1,a,_,<,-
+
+q1,_,_
+q2,_,_,>,>
+
+q2,a,b
+q2,a,b,>,>
+
+q2,_,_
+qaccept,_,_,-,-
+
+// < = left
+// > = right
+// - = hold
+// use underscore for blank cells
+
+//States and symbols are case-sensitive
+
+//Load your code and click COMPILE.
+//or load an example (top-right).

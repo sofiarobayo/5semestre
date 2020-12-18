@@ -1,0 +1,60 @@
+Alternos--si sirve en el prog
+c=[1,1/2];
+A=[2,1;1,2];
+b=[4;3]
+tipoineq=[1,1];
+
+solucion acotada -- si sirve en el prog
+
+c=[-2,-4];
+A=[1,2;-1,2];
+b=[4;1]
+tipoineq=[1,1];
+
+
+solucion acotada -- si sirve en el prog
+
+c=[-1,-3];
+A=[1,-2;-1,1];
+b=[4;3]
+tipoineq=[1,1];
+
+
+solucion optima min -- si sirve en el prog
+c=[-2,-4];
+A=[2,3;0,8];
+b=[7;4]
+tipoineq=[1,1];
+
+
+solucion optima min -- si sirve en el prog
+c=[5,4];
+A=[2,2;6,3;5,10];
+b=[14;36;60]
+tipoineq=[1,1,1];
+
+
+solucion optima max -- si sirve en el prog
+c=[5,-7];
+A=[10,3;6,-2];
+b=[3;2];
+tipoineq=[1,1];
+
+solucion optima max -- si sirve en el prog
+c=[5,4,3];
+A=[2,3,1;4,1,2;3,4,2];
+b=[5;11;8]
+tipoineq=[1,1,1];
+
+
+solucion optima varart min---creo que sirve
+c=[3,2,4];
+A=[2,2,3;2,3,1];
+b=[15;12]
+tipoineq=[-1,1];
+
+solucion optima varart min---creo que sirve
+c=[5,8];
+A=[6,5;0,1;-2,2];
+b=[30;1;6]
+tipoineq=[1,-1,1];

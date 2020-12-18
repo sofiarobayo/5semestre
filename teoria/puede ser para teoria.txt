@@ -1,0 +1,21 @@
+dado es Turing-decidible vamos a tener la siguiente proposición:\\
+
+\textbf{Proposición:} $A_{PDA}$ es Turing decidible.\\
+Sea $B$ una TM que ejecuta el siguiente algoritmo:
+
+
+\begin{enumerate}
+    \item \textbf{\large procedure} EVALUAR$\_$CADENA$\_$PDA$(\langle M,w \rangle):$\\
+    \item Lee los símbolos de la cadena $w$ y lo almacena en $M$\\
+    \item Reemplaza el primer elemento de $M$ por una cadena\\
+    \item \textbf{\large if} $M$ está vacío y va a un estado de aceptación \textbf{\large then}\\
+    \item Aceptar\\
+    \item \textbf{\large else}\\
+    \item Rechazar
+
+\end{enumerate}
+
+    \begin{center}
+    
+        
+    \end{center}

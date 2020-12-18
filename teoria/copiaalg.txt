@@ -1,0 +1,40 @@
+//LOAD AN EXAMPLE TO TRY
+//then load an input and click play
+
+//Syntax:
+
+//-------CONFIGURATION
+name: copia
+init: q0
+accept:qaccept
+
+//-------DELTA FUNCTION:
+q0,0,_
+q0,0,_,>,-
+
+q0,1,_
+q0,1,_,>,-
+
+q0,#,_
+q1,#,_,>,-
+
+q1,0,_
+q1,_,0,>,>
+
+q1,1,_
+q1,_,1,>,>
+
+q1,_,_
+qaccept,_,_,-,-
+
+
+
+// < = left
+// > = right
+// - = hold
+// use underscore for blank cells
+
+//States and symbols are case-sensitive
+
+//Load your code and click COMPILE.
+//or load an example (top-right).

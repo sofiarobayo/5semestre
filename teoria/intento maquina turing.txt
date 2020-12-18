@@ -1,0 +1,95 @@
+//LOAD AN EXAMPLE TO TRY
+//then load an input and click play
+
+//Syntax:
+
+//-------CONFIGURATION
+name: ejercicio de clase
+init: q0
+accept:qaccept
+
+//-------DELTA FUNCTION:
+q0,a
+q0,a,>
+
+q0,b
+q1,b,>
+
+q1,b
+q1,b,>
+
+q1,c
+q2,c,>
+
+q2,c
+q2,c,>
+
+q2,_
+q3,_,<
+
+q3,c
+q3,c,<
+
+q3,b
+q3,b,<
+
+q3,a
+q3,a,<
+
+q3,_
+q4,_,>
+
+q4,a
+q5,X,>
+
+q5,a
+q5,a,>
+
+q5,b
+q6,X,>
+
+q6,b
+q6,b,>
+
+q6,c
+q7,X,<
+
+q7,b
+q7,b,<
+
+q7,X
+q8,X,>
+
+q8,b
+q9,X,>
+
+q9,b
+q9,b,>
+
+q9,X
+q9,X,>
+
+q9,c
+q10,X,<
+
+q10,X
+q8,X,<
+
+q8,X
+q8,X,<
+
+q8,a
+q11,X,>
+
+q11,c
+q12,Y
+
+// < = left
+// > = right
+// - = hold
+// use underscore for blank cells
+
+//States and symbols are case-sensitive
+
+//Load your code and click COMPILE.
+//or load an example (top-right).
